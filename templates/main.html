@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Pago</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/payment_info.css') }}">
+  </head>
+  <header>
+      <div class="container">
+        <h1 class="logo">Luna Shop</h1>
+      </div>
+    </header>
+  <body>
+<div class="container mt-5 p-3 rounded cart">
+    <div class="row no-gutters">
+        <div class="col-md-8">
+            <div class="product-details mr-2">
+                <div class="d-flex flex-row align-items-center"><i class="fa fa-long-arrow-left"></i><span class="ml-2">Continuar comprando</span></div>
+                <hr>
+                <h6 class="mb-0">Carrito</h6>
+                <div class="d-flex justify-content-between"><span>Tienes 4 productos en tu carrito</span>
+                    <div class="d-flex flex-row align-items-center"><span class="text-black-50">Ordenar por:</span>
+                        <div class="price ml-2"><span class="mr-1">precio</span><i class="fa fa-angle-down"></i></div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                    <div class="d-flex flex-row"><img src="image1.jpg">
+                        <div class="ml-2"><span class="font-weight-bold d-block">Suéter</span><span class="spec">Olivo</span></div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span class="d-block ml-5 font-weight-bold">$459.00</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                    <div class="d-flex flex-row"><img src="image2.jpg">
+                        <div class="ml-2"><span class="font-weight-bold d-block">Abrigo</span><span class="spec">Café, Unitalla</span></div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span class="d-block ml-5 font-weight-bold">$1,200.00</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                    <div class="d-flex flex-row"><img src="image3.jpg">
+                        <div class="ml-2"><span class="font-weight-bold d-block">Collar</span><span class="spec">Baño de oro, 14k</span></div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center"><span class="d-block">2</span><span class="d-block ml-5 font-weight-bold">$500.00</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                    <div class="d-flex flex-row"><img src="image4.jpg">
+                        <div class="ml-2"><span class="font-weight-bold d-block">Labial Fenty Beauty&nbsp;</span><span class="spec">Oro rosa</span></div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span class="d-block ml-5 font-weight-bold">$250.00</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="payment-info">
+                <div class="d-flex justify-content-between align-items-center"><span>Detalles de la tarjeta</span><img class="rounded" src="https://i.imgur.com/WU501C8.jpg" width="30"></div><span class="type d-block mt-3 mb-1">Tipo de tarjeta</span><label class="radio"> <input type="radio" name="card" value="payment" checked> <span><img width="30" src="https://img.icons8.com/color/48/000000/mastercard.png" /></span> </label>
+                <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/officel/48/000000/visa.png" /></span> </label>
+                <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/ultraviolet/48/000000/amex.png" /></span> </label>
+                <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/officel/48/000000/paypal.png" /></span> </label>
+                <div><label class="credit-card-label">Nombre mostrado en la tarjeta</label><input type="text" class="form-control credit-inputs" placeholder="Name"></div>
+                <div><label class="credit-card-label">Número de tarjeta</label><input type="text" class="form-control credit-inputs" placeholder="0000 0000 0000 0000"></div>
+                <div class="row">
+                    <div class="col-md-6"><label class="credit-card-label">Fecha de expiración</label><input type="text" class="form-control credit-inputs" placeholder="12/24"></div>
+                    <div class="col-md-6"><label class="credit-card-label">CVV</label><input type="text" class="form-control credit-inputs" placeholder="342"></div>
+                </div>
+                <hr class="line">
+                <div class="d-flex justify-content-between information"><span>Subtotal: &nbsp;</span><span>$2,409.00</span></div>
+                <div class="d-flex justify-content-between information"><span>Costo de envío: &nbsp;</span><span>$50.00</span></div>
+                <div class="d-flex justify-content-between information"><span>Total: &nbsp;</span><span>$2,459.00</span></div><button class="btn btn-primary btn-block d-flex justify-content-between mt-3" type="button"><a href="{{ url_for('pagoconfirmado') }}"><span>Pagar<i class="fa fa-long-arrow-right ml-1"></i></span></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
