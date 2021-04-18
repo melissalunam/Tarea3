@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
+<<<<<<< HEAD
+=======
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/script.js"></script>
+<script  src="js/index.js"></script> 
+
+>>>>>>> dbb3ab2ee4979b457300a383b6359b2624bdd7d4
   <head>
     <title>Pago</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/payment_info.css') }}">
@@ -48,7 +55,11 @@
         </div>
         <div class="col-md-4">
             <div class="payment-info">
+<<<<<<< HEAD
                 <form action="confirmar.html" method="get" class="datos" id="datos">
+=======
+                <form action="" method="post" class="datos" id="datos">
+>>>>>>> dbb3ab2ee4979b457300a383b6359b2624bdd7d4
                 <div class="d-flex justify-content-between align-items-center"><span>Detalles de la tarjeta</span></div><span class="type d-block mt-3 mb-1">Tipo de tarjeta</span><label class="radio"> <input type="radio" name="card" value="payment" checked> <span><img width="30" src="https://img.icons8.com/color/48/000000/mastercard.png" /></span> </label>
                 <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/officel/48/000000/visa.png" /></span> </label>
                 <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/ultraviolet/48/000000/amex.png" /></span> </label>
@@ -69,5 +80,26 @@
     </div>
 </div>
 
+<<<<<<< HEAD
+=======
+<script>
+ /*Funcion de Capturar, Almacenar datos y Limpiar campos*/
+$(document).ready(function(){    
+    $('#boton-guardar').click(function(){        
+        /*Captura de datos escrito en los inputs*/        
+        var nombre = document.getElementById("nombre").value;
+        var numero_tarjeta = document.getElementById("numero de tarjeta").value;
+        var fecha_expiracion = document.getElementById("fecha de expiracion").value;
+        var cvv = document.getElementById("cvv").value;
+        /*Guardando los datos en el LocalStorage*/
+        localStorage.setItem("Nombre", nombre);
+        localStorage.setItem("Numero de tarjeta", numero_tarjeta);
+        localStorage.setItem("Fecha de expiracion", fecha_expiracion);
+        localStorage.setItem("CVV", cvv);
+    });   
+});
+</script>
+
+>>>>>>> dbb3ab2ee4979b457300a383b6359b2624bdd7d4
 </body>
 </html>

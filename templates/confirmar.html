@@ -6,7 +6,10 @@
     <meta charset="utf-8">
     <title>Confirmar datos</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/payment_info.css') }}">
+<<<<<<< HEAD
     <script language="javascript" type="text/javascript" src="db.js"></script>
+=======
+>>>>>>> dbb3ab2ee4979b457300a383b6359b2624bdd7d4
 
 <header>
       <div class="container">
@@ -14,6 +17,27 @@
       </div>
     </header>
     
+<<<<<<< HEAD
+=======
+<script>
+/*Funcion Cargar y Mostrar datos*/
+$(document).ready(function(){    
+    $('#boton-cargar').click(function(){                       
+        /*Obtener datos almacenados*/
+        var nombre = localStorage.getItem("Nombre");
+        var numero_tarjeta = localStorage.getItem("Numero de tarjeta");
+        var fecha_expiracion = localStorage.getItem("Fecha de expiracion");
+        var cvv = localStorage.getItem("CVV");
+        /*Mostrar datos almacenados*/      
+        document.getElementById("nombre").innerHTML = nombre;
+        document.getElementById("numero de tarjeta").innerHTML = numero_tarjeta;
+        document.getElementById("fecha de expiracion").innerHTML = fecha_expiracion;
+        document.getElementById("cvv").innerHTML = cvv; 
+    });   
+});
+
+</script>
+>>>>>>> dbb3ab2ee4979b457300a383b6359b2624bdd7d4
 </head>      
 <hr />
 Nombre:
