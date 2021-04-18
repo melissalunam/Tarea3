@@ -1,0 +1,10 @@
+var url_string = window.location.href; //
+var url = new URL(url_string);
+var nombre = url.searchParams.get("nombre");
+var nombre = url.searchParams.get("numero de tarjeta");
+var nombre = url.searchParams.get("fecha de expiracion");
+var nombre = url.searchParams.get("cvv");
+document.getElementById("nombre").value = nombre;
+document.getElementById("numero de tarjeta").value = numero_tarjeta;
+document.getElementById("fecha de expiracion").value = fecha_expiracion;
+document.getElementById("cvv").value = cvv;
