@@ -6,6 +6,10 @@ app = Flask(__name__)
 def main():
     return render_template("main.html")
 
+@app.route("/confirmar")
+def confirmar():
+    return render_template("confirmar.html")
+
 @app.route("/pagoconfirmado")
 def pagoconfirmado():
     return render_template("pago_confirmado.html")
