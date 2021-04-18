@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/script.js"></script>
+<script  src="js/index.js"></script> 
+
   <head>
     <title>Pago</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/payment_info.css') }}">
@@ -50,16 +55,18 @@
         </div>
         <div class="col-md-4">
             <div class="payment-info">
+                <form action="" method="post" class="datos" id="datos">
                 <div class="d-flex justify-content-between align-items-center"><span>Detalles de la tarjeta</span></div><span class="type d-block mt-3 mb-1">Tipo de tarjeta</span><label class="radio"> <input type="radio" name="card" value="payment" checked> <span><img width="30" src="https://img.icons8.com/color/48/000000/mastercard.png" /></span> </label>
                 <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/officel/48/000000/visa.png" /></span> </label>
                 <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/ultraviolet/48/000000/amex.png" /></span> </label>
                 <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/officel/48/000000/paypal.png" /></span> </label>
-                <div><label class="credit-card-label">Nombre mostrado en la tarjeta</label><input type="text" class="form-control credit-inputs" placeholder="Nombre"></div>
-                <div><label class="credit-card-label">Número de tarjeta</label><input type="text" class="form-control credit-inputs" placeholder="0000 0000 0000 0000"></div>
+                <div><label class="credit-card-label">Nombre mostrado en la tarjeta</label><input type="text" class="nombre" placeholder="Nombre" id="nombre"></div>
+                <div><label class="credit-card-label">Número de tarjeta</label><input type="text" class="numero de tarjeta" placeholder="0000 0000 0000 0000" id="numero de tarjeta"></div>
                 <div class="row">
-                    <div class="col-md-6"><label class="credit-card-label">Fecha de expiración</label><input type="month" name="mes" step="1" min="2021-04" max="2025-12" value="2021-04" class="form-control credit-inputs"></div>
-                    <div class="col-md-6"><label class="credit-card-label">CVV</label><input type="text" class="form-control credit-inputs" placeholder="342"></div>
+                    <div class="col-md-6"><label class="credit-card-label">Fecha de expiración</label><input type="month" name="mes" step="1" min="2021-04" max="2025-12" value="2021-04" class="fecha de expiracion" id="fecha de expiracion"></div>
+                    <div class="col-md-6"><label class="credit-card-label">CVV</label><input type="text" class="cvv" placeholder="342" id="cvv"></div>
                 </div>
+                </form>
                 <hr class="line">
                 <div class="d-flex justify-content-between information"><span>Subtotal: &nbsp;</span><span>$2,409.00</span></div>
                 <div class="d-flex justify-content-between information"><span>Costo de envío: &nbsp;</span><span>$50.00</span></div>
@@ -68,5 +75,24 @@
         </div>
     </div>
 </div>
+
+<script>
+ /*Funcion de Capturar, Almacenar datos y Limpiar campos*/
+$(document).ready(function(){    
+    $('#boton-guardar').click(function(){        
+        /*Captura de datos escrito en los inputs*/        
+        var nombre = document.getElementById("nombre").value;
+        var numero_tarjeta = document.getElementById("numero de tarjeta").value;
+        var fecha_expiracion = document.getElementById("fecha de expiracion").value;
+        var cvv = document.getElementById("cvv").value;
+        /*Guardando los datos en el LocalStorage*/
+        localStorage.setItem("Nombre", nombre);
+        localStorage.setItem("Numero de tarjeta", numero_tarjeta);
+        localStorage.setItem("Fecha de expiracion", fecha_expiracion);
+        localStorage.setItem("CVV", cvv);
+    });   
+});
+</script>
+
 </body>
 </html>
